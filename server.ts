@@ -11,8 +11,7 @@ import { getCurrencyStrength } from "./server/currencyStrength.js";
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
-
+const PORT = parseInt(process.env.PORT || "3000", 10);
 // Initialize TradingView Real-time WebSocket Streaming client for CFDs
 const tvWs = getTradingViewWs();
 
